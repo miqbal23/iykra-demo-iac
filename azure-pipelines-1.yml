@@ -7,8 +7,7 @@ variables:
   ServiceConnectionName: 'azure-conn'
   EnvironmentType: 'Test'
   ResourceGroupName: 'iqblbicep'
-- name: deploymentDefaultLocation
-  value: southeastasia
+  deploymentDefaultLocation: 'southeastasia'
 
 jobs:
 - job:
