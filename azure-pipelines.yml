@@ -20,6 +20,6 @@ steps:
     location: 'Southeast Asia'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/miqbal23/iykra-demo-iac/main/template/azuredeploy.json'
-    overrideParameters: '-projectName iykra-iac-iqbal'
+    overrideParameters: '-projectName iykraiqb'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
