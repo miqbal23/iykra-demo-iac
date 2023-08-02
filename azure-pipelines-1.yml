@@ -4,6 +4,9 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
+  ServiceConnectionName: 'azure-conn'
+  EnvironmentType: 'Test'
+  ResourceGroupName: 'iqblbicep'
 - name: deploymentDefaultLocation
   value: southeastasia
 
