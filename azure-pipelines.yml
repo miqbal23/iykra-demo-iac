@@ -1,0 +1,25 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'azure-conn'
+    subscriptionId: 'ca0119b7-cbb5-4855-8218-0c38fe34a02a'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'ARMPipeline-rg'
+    location: 'Southeast Asia'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/miqbal23/iykra-demo-iac/main/template/azuredeploy.json'
+    overrideParameters: '-projectName iykra-iac-iqbal'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
